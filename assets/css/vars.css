@@ -2,6 +2,7 @@
 /* ---------------------------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
 :root {
 
@@ -9,10 +10,10 @@
     --color-primary: #3eb0ef;
     --color-base: #131313;
     --color-border: #ddd;
-    --color-bg: #f8f8f8;
+    --color-bg: #FFFF00;
 
     /* Fonts */
-    --font-sans-serif: 'Muli', sans-serif;
+    --font-sans-serif: 'Crimson Text', sans-serif;
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
     --font-light: 100;
