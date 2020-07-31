@@ -3,6 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open Sans');
 
 :root {
 
@@ -10,12 +11,16 @@
     --color-primary: #3eb0ef;
     --color-base: #131313;
     --color-border: #ddd;
-    --color-bg: #FFFF00;
+    --color-bg: #ffffff;
+    --color-nav: #333764;
+    --color-title: #00aef3;
+    --color-nav-links: #d8d8d8;
 
     /* Fonts */
     --font-sans-serif: 'Crimson Text', sans-serif;
-    --font-serif: Georgia, Times, serif;
+    --font-serif: 'Open Sans', Times, serif;
     --font-mono: Menlo, Courier, monospace;
+    --font-title: Georgia, Times, serif;
     --font-light: 100;
     --font-normal: 400;
     --font-bold: 700;
