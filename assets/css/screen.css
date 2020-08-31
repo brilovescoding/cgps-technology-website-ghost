@@ -442,6 +442,12 @@ body {
     }
 }
 
+.post-card-small {
+    flex: 1 1 150px;
+    height: 150px;
+
+}
+
 .post-card-large {
     flex: 1 1 100%;
 }
