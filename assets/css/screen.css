@@ -428,7 +428,7 @@ body {
     flex: 1 1 50%;
     display: flex;
     position: relative;
-    height: 35vw;
+    height: 20vw;
     background: linear-gradient(135deg, #1f1f1f 0%, #111 100%) center center;
     background-size: cover;
     overflow: hidden;
