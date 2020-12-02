@@ -10,7 +10,7 @@
     /* Colours */
     --color-primary: #3eb0ef;
     --color-base: #131313;
-    --color-border: #ddd;
+    --color-border: rgb(49, 49, 49);
     --color-bg: #ffffff;
     --color-nav: #333764;
     --color-title: #00aef3;

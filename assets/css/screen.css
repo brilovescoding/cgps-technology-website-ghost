@@ -65,7 +65,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 15vw 0;
+    padding: 7.5vw 0 5vw 0;
     max-width: 70%;
     margin: auto;
     text-align: center;
@@ -99,13 +99,15 @@ body {
 .page-head-title {
     margin: 0;
     font-size: 4.2rem;
+    padding: 1vw 0;
     color: var(--color-base);
 }
 .home-page-description {
     margin: 0;
-    color: color(var(--color-base) l(-20%));
-    font-size: 2rem;
-    padding: 0 25px;
+    color: var(--color-border);
+    font-size: 2.2rem;
+    padding: 1vw 0;
+
 }
 @media (max-width: 500px) {
     .page-head-title {
@@ -117,10 +119,11 @@ body {
 }
 
 .page-head-description {
-    margin: 0 0 1.6vw;
-    color: color(var(--color-border) l(-20%));
+    margin: 0;
+    color: var(--color-border);
     font-size: 2.2rem;
     line-height: 1.35em;
+    padding: 1vw 0;
 }
 @media (max-width: 500px) {
     .page-head-description {
@@ -543,7 +546,7 @@ body {
 .post-content {
     max-width: 720px;
     margin: 0 auto;
-    padding: 15vw 0 5vw 0;
+    padding: 7.5vw 0 5vw 0;
 }
 
 .post-content-header {
@@ -553,19 +556,21 @@ body {
 }
 
 .post-content-title {
-    margin: 0 0 3vw;
+    margin: 0;
     color: var(--color-base);
     text-align: center;
     font-size: 4.2rem;
+    padding: 1vw 0;
 }
 
 .post-content-excerpt {
-    margin: -2vw 0 3vw;
+    margin: 0;
+    padding: 1vw 0;
     font-size: 2.2rem;
     line-height: 1.6em;
-    color: var(--color-base);
+    color: var(--color-border);
     text-align: center;
-    opacity: 0.5;
+    
 }
 @media (max-width: 500px) {
     .post-content-excerpt {
