@@ -19,10 +19,12 @@
 
     <div class="post-content-body">
         {{content}}
+                
     </div>
     <h4>Course List</h4>
     {{#get "pages" limit="all" include="tags" as | pages |}}
         <ul>
+    
         {{#foreach pages}}
             {{#has tag="Courses"}}
                 <li><a href="{{url}}">{{title}}</a></li>
