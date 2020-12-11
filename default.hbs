@@ -13,7 +13,9 @@
 
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "built/jquery.gcal_flow.css"}}" />
 
+    
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
@@ -123,5 +125,14 @@
         });
     </script>
 
+    <!-- gcal flow -->
+    <script src="{{asset "js/jquery.gcal_flow.js"}}"></script>
+    <script type="text/javascript">
+
+        $(function() { $('#gcf-simple').gCalFlow({
+            calid: 'lvukotcgrdla8p2s2ar6498chc@group.calendar.google.com',
+            apikey: 'AIzaSyCdbN-Y80HKLMwfqgNgxaV11JdELxnOD1c'            
+        });});
+    </script>
 </body>
 </html>

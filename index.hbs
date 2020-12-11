@@ -6,17 +6,22 @@ into the {body} of the default.hbs template --}}
 {{#is "home"}}
     {{#if @site.description}}
     <header class="page-head">
-        <h2 class="page-head-title">{{@site.description}}</h2>
-        <p class="home-page-description">CGPS offers a wide variety of technology courses. Ranging from Web Design to Robotics, students have the ability to follow their interests and learn skills that are applicable in the real world.</p>
+        <h2 class="page-head-title">{{@site.title}}</h2>
+        <p class="home-page-description">{{@site.description}}</p>
     </header>
     {{/if}}
 {{/is}}
-
-<div class="post-feed">
-    {{#foreach posts}}
-        {{#has tag="news"}}
-        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-            {{> "post-card"}}
-        {{/has}}
-    {{/foreach}}
+<div class="main-page-content-container">
+    <div class="post-feed main-page-feed">
+        {{#foreach posts}}
+            {{#has tag="news"}}
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+            {{/has}}
+        {{/foreach}}
+    </div>
+    <div class="main-page-calendar">
+        <div id="gcf-simple"></div>
+            
+    </div>
 </div>
