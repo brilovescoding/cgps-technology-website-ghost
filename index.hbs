@@ -20,8 +20,15 @@ into the {body} of the default.hbs template --}}
             {{/has}}
         {{/foreach}}
     </div>
-    <div class="main-page-calendar">
-        <!--<div id="gcf-simple"></div>-->
-            
-    </div>
+   
 </div>
+{{#is "home"}}
+    <div id="calendar-container"></div>
+    <script type="text/javascript">
+    new GoogleCalendarEvents('AIzaSyCdbN-Y80HKLMwfqgNgxaV11JdELxnOD1c')
+        .calendarId('lvukotcgrdla8p2s2ar6498chc@group.calendar.google.com')
+        .maxResults(10)
+        .momentDateFormat('MMMM Do YYYY')
+        .render('#calendar-container');
+    </script>
+{{/is}}
