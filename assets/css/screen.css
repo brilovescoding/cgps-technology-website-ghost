@@ -764,3 +764,14 @@ body {
 .page-template .post-content-body h3 {
     text-align: center;
 }
+
+
+/* Custom CSS 
+---------------------------------------------------------------- */
+
+.calendar-wrapper {
+    background-color: #00AEF3;
+    border: solid 1px;
+    padding: 10px;
+    
+}
