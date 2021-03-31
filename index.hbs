@@ -4,31 +4,43 @@ into the {body} of the default.hbs template --}}
 {{!-- test --}}
 {{!-- test2 --}}
 {{#is "home"}}
-    {{#if @site.description}}
+    
     <header class="page-head">
         <h2 class="page-head-title">{{@site.title}}</h2>
         <p class="home-page-description">{{@site.description}}</p>
+        <p>
+            {{#get "pages" filter="tag:mainpage" limit="1" }}
+                {{#foreach pages}}
+                    {{content}}
+                {{/foreach}}
+            {{/get}}
+        </p>
     </header>
-    {{/if}}
-{{/is}}
+{{/is}} 
 <div class="main-page-content-container">
-    <div class="post-feed main-page-feed">
-        {{#foreach posts}}
-            {{#has tag="news"}}
-            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-            {{/has}}
-        {{/foreach}}
-    </div>
-   
-</div>
-{{#is "home"}}
     <div class="calendar-wrapper">
         <h3>Calendar</h3>
         <div id="calendar-container">
         
         </div>
     </div>
+    <div class="main-page-feed-wrapper">
+       
+        <div class="post-feed main-page-feed">
+            
+            {{#foreach posts}}
+                {{#has tag="news"}}
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                    {{> "post-card-with-text"}}
+                {{/has}}
+            {{/foreach}}
+        </div>
+    </div>
+    
+   
+</div>
+{{#is "home"}}
+
     <script type="text/javascript">
     new GoogleCalendarEvents('AIzaSyCdbN-Y80HKLMwfqgNgxaV11JdELxnOD1c')
         .calendarId('lvukotcgrdla8p2s2ar6498chc@group.calendar.google.com')

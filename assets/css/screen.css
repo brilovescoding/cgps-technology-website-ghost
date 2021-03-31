@@ -67,7 +67,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 7.5vw 0 5vw 0;
+    padding: 6.0vw 0 5vw 0;
     max-width: 70%;
     margin: auto;
     text-align: center;
@@ -100,9 +100,10 @@ body {
 
 .page-head-title {
     margin: 0;
-    font-size: 4.2rem;
+    font-size: 5.5rem;
     padding: 1vw 0;
     color: var(--color-base);
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
 }
 .home-page-description {
     margin: 0;
@@ -424,22 +425,21 @@ body {
 /* ---------------------------------------------------------- */
 
 .post-feed {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .post-card {
-    position: relative;
-    flex: 1 1 33%;
-    display: flex;
-    position: relative;
-    height: 20vw;
-    background: linear-gradient(135deg, #1f1f1f 0%, #111 100%) center center;
-    background-size: cover;
+    height: 15vw;
     overflow: hidden;
     counter-increment: posts;
-    margin: 0 30px 0 30px;
+    margin: 0 30px 30px 30px;
+    max-width: 400px;
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    transition: all .5s ease; /* back to normal */
+
 }
+
 
 @media (max-width: 700px) {
     .post-card {
@@ -459,29 +459,17 @@ body {
 }
 
 .post-card-link {
-    display: flex;
-    flex: 1 1 auto;
-    background: rgba(0,0,0,0.6);
-    align-items: center;
-    justify-content: center;
-    padding: 25px;
     text-decoration:none !important;
+    height:inherit;
 }
 
 .post-card-content {
-    flex: 1 1 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    opacity: 0;
+    color: #FFF;
     padding: 20px;
+    height:inherit;
+
 }
 
-.post-card-content:hover {
-    opacity: 1;
-    transition: opacity 0.5s cubic-bezier(.33,0,.2,1);
-}
 
 /* .post-card.with-image .post-card-content {
     opacity: 0;
@@ -492,46 +480,42 @@ body {
   }
 } */
 
-.post-card-link:hover .post-card-content {
+.post-card:hover {
+    transform: translate3D(0,-1px,0) scale(1.03);
+    box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+    transition: all .4s ease; /* zoom in */
+
+}
+.post-card.with-image .post-card-link .post-card-text {
+    opacity: 0;
+
+}
+.post-card.with-image .post-card-link:hover .post-card-text {
     opacity: 1;
-    transition: opacity 0.3s cubic-bezier(.33,0,.2,1);
+    transition: opacity 0.5s cubic-bezier(.33,0,.2,1);
+}
+
+.post-card.with-image .post-card-link:hover .post-card-content {
+    background: rgba(0, 0, 0, .4);
+    transition: background 0.5s cubic-bezier(.33,0,.2,1);
 }
 
 .post-card-title {
-    padding-bottom: 80px;
-    display: inline-block;
-    flex: 1 1 30%;
-    font-size: 3rem;
-    text-align: center;
+    margin: 0 0 15px 0;
+    font-size: 2rem;
+    text-decoration:none;
     opacity: 1 !important;
-    color: #fff;
-    align-items: center;
-
-
 }
 .post-card-text {
-    display: flex; 
-    flex: 1 1 200px;
-    max-height: 90%;
+    text-decoration: none;
 }
 
 /* Posts without images */
 
 
-.post-card.no-image .post-card-content {
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 4vw;
-}
-
-.post-card.no-image .post-card-title {
-    font-size: 3rem;
-    line-height: 1.15em;
-    text-align: left;
-}
 
 .post-card.no-image:hover  {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 @media (max-width: 1200px) {
@@ -770,8 +754,28 @@ body {
 ---------------------------------------------------------------- */
 
 .calendar-wrapper {
-    background-color: #00AEF3;
-    border: solid 1px;
-    padding: 10px;
+    background-color: #D8D8D8;
+    padding: 0 10px 10px 10px;
+
     
+}
+
+.main-page-content-container {
+    display: grid;
+    grid-template-columns: minmax(200px, 30%) 70%;
+    column-gap:15px;
+}
+
+.google_event_list {
+    list-style-type: none;
+}
+
+.google_event_list_item {
+    padding: 10px 18px;
+    border-bottom: 2px solid #181818;
+}
+
+.main-page-feed {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 10px;
 }

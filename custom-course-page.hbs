@@ -1,6 +1,6 @@
 {{!< default}}
 
-{{#page}}
+{{#post}}
 <article class="post-content {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
     <header class="post-content-header">
@@ -26,25 +26,19 @@
     Displays a container with three projects that visitors can explore more
     Gets posts that match the primary tag of the course page (which should be the name of the course)
     --}}
-    {{#get "posts" filter="tag:{{primary_tag.slug}}" limit="all"}}
+    {{#get "posts" filter="tag:{{primary_tag.slug}}" limit="3"}}
     <h4>Course Work Examples</h4>
     <div class="post-feed">
         {{#foreach posts}}
 
-            <article class="post-card post-card-small {{post_class}} {{#if feature_image}}with-image" style="background-image: url({{img_url feature_image size="m"}}){{else}}no-image{{/if}}">
+            {{> "post-card-with-text"}}
 
-                <a class="post-card-link" href="{{url}}">
-                    <div class="post-card-content">
-                        <h2 class="post-card-title">{{title}}</h2>
-                    </div>
-                </a>
-            </article>
 
         {{/foreach}}
-        </div>
+    </div>
     {{/get}}
 </article>
-{{/page}}
+{{/post}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}

@@ -1,14 +1,11 @@
 
-
-
-<article class="post-card {{post_class}} {{#if feature_image}}with-image" style="background-image: url({{img_url feature_image size="l"}}){{else}}no-image{{/if}}">
+<article class="post-card {{post_class}} {{#if feature_image}}with-image{{else}}no-image{{/if}}" style="background: linear-gradient(rgba(0,174,243,.7), rgba(0,174,243,.8)){{#if feature_image}}, url({{img_url feature_image size="s"}});background-repeat: no-repeat;background-size:cover;{{/if}}">
     <a class="post-card-link" href="{{url}}">
-        <h2 class="post-card-title">{{title}}</h2>
         <div class="post-card-content">
-            
+            <h5 class="post-card-title">{{title}}</h5>
             <p class="post-card-text">
                 {{#if excerpt}}
-                {{excerpt characters="160"}}...
+                {{excerpt words="15"}}
                 {{else}}
                 &nbsp;
                 {{/if}}

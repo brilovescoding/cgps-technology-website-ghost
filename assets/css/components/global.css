@@ -380,7 +380,7 @@ h2 {
 }
 
 h3 {
-    margin: 1.5em 0 1em 0;
+    margin: 0.5em 0 1em 0;
     font-size: 3.2rem;
 }
 @media (max-width: 500px) {

@@ -27,7 +27,7 @@
     
         {{#foreach pages}}
             {{#has tag="Courses"}}
-                <li><a href="{{url}}">{{title}}</a></li>
+                 {{> "post-card-with-text"}}
             {{/has}}
         {{/foreach}}
         </ul>
