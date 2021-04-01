@@ -21,18 +21,21 @@
         {{content}}
                 
     </div>
-    <h4>Course List</h4>
-    {{#get "pages" limit="all" include="tags" as | pages |}}
-        <ul>
     
-        {{#foreach pages}}
-            {{#has tag="Courses"}}
-                 {{> "post-card-with-text"}}
-            {{/has}}
-        {{/foreach}}
-        </ul>
-    {{/get}}
 </article>
+
+<h4>Course List</h4>
+    {{#get "pages" limit="all" include="tags" as | pages |}}
+        <div class="course-list-cards">
+    
+            {{#foreach pages}}
+                {{#has tag="Courses"}}
+                    {{> "post-card-with-text"}}
+                {{/has}}
+            {{/foreach}}
+
+        </div>
+    {{/get}}
 {{/post}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
