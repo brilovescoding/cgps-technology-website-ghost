@@ -67,12 +67,13 @@
 
 
 <script>
+var $= jQuery.noConflict();
+
 $(window).on('load', function() {
 
 	
 
 	/* Apply fancybox to multiple items */
-	if (jQuery().fancybox) {
         $('[data-fancybox]').fancybox({
             iframe : {
             preload : false,
@@ -85,7 +86,6 @@ $(window).on('load', function() {
         
         
         });
-    }
 	
 });
 
