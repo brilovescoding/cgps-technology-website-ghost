@@ -39,9 +39,9 @@
             {{/foreach}}
 
         </div>
+        <div class="go-to-top-button">Go to Top</div>
     {{/get}}
     <script src="../assets/js/fitty.js"></script>
-
     <script>
         
         fitty("td");
@@ -137,6 +137,9 @@
             console.log(courseName)
             $(".post-card").css("background-color", "rgb(38,168,237)").css("outline-width", "1px")
             $(".post-card:contains('"+courseName+"')").css("background-color", "rgb(51, 55, 100").css("outline-width", "3px")
+             $('html, body').animate({
+                scrollTop: $(".post-card:contains('"+courseName+"')").offset().top
+            }, 2000);
           }
 
 
