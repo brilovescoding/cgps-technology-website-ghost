@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+{{!< post}}
+
+<script>
+$(document).ready(function() {
+
+	
+
+	/* Apply fancybox to multiple items */
+	
+	$('[data-fancybox]').fancybox({
+		iframe : {
+		  preload : false,
+        autoDimensions: true,
+        css: {
+            width: 600,
+            height: 600
+        }
+	  }
+    
+	});
+	
+});
+
+</script>
