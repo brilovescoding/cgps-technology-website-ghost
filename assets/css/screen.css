@@ -791,7 +791,7 @@ body {
 }
 
 .post-card {
-    min-width: 300px;
+    min-width: 200px;
     min-height:200px;
     max-height: 250px;
     outline: 1px solid #F6E119;
@@ -800,7 +800,7 @@ body {
 
 }
 
-.chart-div {
+#chart-div {
     overflow-x: scroll;
     width: 800px;
 }
