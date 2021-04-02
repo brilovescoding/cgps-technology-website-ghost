@@ -135,6 +135,7 @@
           if (chart.getSelection()[0] != undefined) {
             let courseName = data.getValue(chart.getSelection()[0].row, 0);
             console.log(courseName)
+            $(".post-card").css("background-color", "rgb(38,168,237)").css("outline-width", "1px")
             $(".post-card:contains('"+courseName+"')").css("background-color", "rgb(51, 55, 100").css("outline-width", "3px")
           }
 
