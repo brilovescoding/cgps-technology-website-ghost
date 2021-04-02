@@ -21,11 +21,15 @@
         {{content}}
                 
     </div>
+
+    <div id="chart-div">
+
+    </div>
     
 </article>
 
 <h4>Course List</h4>
-    {{#get "pages" limit="all" include="tags" as | pages |}}
+    {{#get "pages" limit="all" order="title asc" include="tags" as | pages |}}
         <div class="course-list-cards">
     
             {{#foreach pages}}
@@ -36,6 +40,12 @@
 
         </div>
     {{/get}}
+    <script src="../assets/js/fitty.js"></script>
+
+    <script>
+        
+        fitty("td");
+    </script>
 {{/post}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
@@ -49,5 +59,92 @@
         var ratio = width / height;
         container.style.flex = ratio + ' 1 0%';
     })
+</script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        data.addRows([
+          [
+            'Intro to Programming',
+            '', 
+            ''
+            ],
+          [
+          'Object-Oriented Programming',
+           'Intro to Programming', 
+           ''
+           ],
+          [
+          'Mobile App Design',
+           'Intro to Programming', 
+           ''
+           ],
+           [
+          'Robotics II',
+           'Intro to Programming', 
+           ''
+           ],
+           [
+          'AP Computer Science A',
+           'Object-Oriented Programming', 
+           ''
+           ],
+           [
+          'Programming & Robotics',
+           '', 
+           '9th Grade Elective only'
+           ],
+           ['Web Design I',
+           '',
+           ''],
+           ['Web Design II',
+           'Web Design I',
+           ''],
+           ['Graphic Design I',
+           '',
+           ''],
+           ['Graphic Design II',
+           'Graphic Design I',
+           '']
+        ]);
+
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('chart-div'));
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        chart.draw(data, 
+        {
+            'allowHtml':true,
+            'nodeClass': "course-chart-card",
+            'selectedNodeClass': "course-chart-card-selected",
+            'size': 'large',
+            'allowCollapse': false
+        });
+
+        google.visualization.events.addListener(chart, 'select', selectHandler);
+
+        function selectHandler(e) {
+          if (chart.getSelection()[0] != undefined) {
+            let courseName = data.getValue(chart.getSelection()[0].row, 0);
+            console.log(courseName)
+            $(".post-card:contains('"+courseName+"')").css("background-color", "rgb(51, 55, 100").css("outline-width", "3px")
+          }
+
+
+        }
+      }
+
+     
+</script>
+<script>
+
 </script>
 {{/contentFor}}

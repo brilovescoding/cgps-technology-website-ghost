@@ -103,7 +103,7 @@ body {
     font-size: 5.5rem;
     padding: 1vw 0;
     color: var(--color-base);
-    font-family: 'Consolas', 'Courier New', Courier, monospace;
+    font-family: var(--font-mono);
 }
 .home-page-description {
     margin: 0;
@@ -558,6 +558,7 @@ body {
     text-align: center;
     font-size: 4.2rem;
     padding: 1vw 0;
+    font-family: var(--font-mono);
 }
 
 .post-content-excerpt {
@@ -795,10 +796,37 @@ body {
     max-height: 250px;
     outline: 1px solid #F6E119;
     outline-offset: -10px;
+    background: linear-gradient(rgba(0,174,243,.7), rgba(0,174,243,.8));
+
 }
 
-hr {
-    color: #F6E119;
+.chart-div {
+    overflow-x: scroll;
+    width: 800px;
+}
+
+.course-chart-card, .course-chart-card-selected {
+    outline: 1px solid #F6E119;
+    outline-offset: -5px;
+    background-color: rgba(0,174,243,.7);
+    font-family: var(--font-serif);
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    border-radius: 2px;
+    vertical-align:middle;
+    padding: 30px;
+    min-width: 100px;
+
+}
+
+
+
+.course-chart-card-selected {
+    background-color: #333764;
+    color: #FFF;
+}
+
+ul.nav li {
+    font-family: var(--font-mono);
 }
 
 @media (max-width: 850px) {

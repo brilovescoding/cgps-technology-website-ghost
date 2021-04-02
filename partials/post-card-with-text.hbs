@@ -1,5 +1,5 @@
 
-<article class="post-card {{post_class}} {{#if feature_image}}with-image{{else}}no-image{{/if}}" style="background: linear-gradient(rgba(0,174,243,.7), rgba(0,174,243,.8)){{#if feature_image}}, url({{img_url feature_image size="s"}});background-repeat: no-repeat;background-size:cover;{{/if}}">
+<article class="post-card {{post_class}} {{#if feature_image}}with-image{{else}}no-image{{/if}}" style="{{#if feature_image}}url({{img_url feature_image size="s"}});background-repeat: no-repeat;background-size:cover;{{/if}}">
     <a class="post-card-link" href="{{url}}">
         <div class="post-card-content">
             <h5 class="post-card-title">{{title}}</h5>
