@@ -39,7 +39,7 @@
             {{/foreach}}
 
         </div>
-        <div class="go-to-top-button">Go to Top</div>
+        <div class="go-to-top-button button center">Go to Top</div>
     {{/get}}
     <script src="../assets/js/fitty.js"></script>
     <script>
@@ -76,45 +76,63 @@
           [
             'Intro to Programming',
             '', 
-            ''
+            'Mr. Schott'
             ],
           [
           'Object-Oriented Programming',
            'Intro to Programming', 
-           ''
+           'Mr. Schott'
            ],
           [
           'Mobile App Design',
            'Intro to Programming', 
-           ''
+           'Mr. Schott'
            ],
            [
           'Robotics II',
            'Intro to Programming', 
-           ''
+           'Mr. Schott'
            ],
            [
           'AP Computer Science A',
            'Object-Oriented Programming', 
-           ''
+           'Mr. Schott'
            ],
            [
           'Programming & Robotics',
            '', 
-           '9th Grade Elective only'
+           'Mr. Schott & Mr. Verga - 9th Grade Elective only'
            ],
            ['Web Design I',
            '',
-           ''],
+           'Ms. Depero'],
            ['Web Design II',
            'Web Design I',
-           ''],
+           'Ms. Depero'],
+           ['3D Modeling',
+           '',
+           'Ms. Royster'],
            ['Graphic Design I',
            '',
-           ''],
+           'Ms. Royster'],
            ['Graphic Design II',
            'Graphic Design I',
-           '']
+           'Ms. Royster'],
+           ['Computer Mathematics',
+           '',
+           'Mr. Hoek'],
+           [{'v': 'Advanced CS Projects 1', 'f': 'Advanced CS Projects'}, 
+           'Object-Oriented Programming',
+           'Mr. Schott'],
+           [{'v': 'Advanced CS Projects 2', 'f': 'Advanced CS Projects'}, 
+           'Mobile App Design',
+           'Mr. Schott'],
+            [{'v': 'Advanced CS Projects 3', 'f': 'Advanced CS Projects'}, 
+           'AP Computer Science A',
+           'Mr. Schott'],
+            [{'v': 'Advanced CS Projects 4', 'f': 'Advanced CS Projects'}, 
+           'Robotics II',
+           'Mr. Schott'],
         ]);
 
         // Create the chart.
@@ -137,14 +155,22 @@
             console.log(courseName)
             $(".post-card").css("background-color", "rgb(38,168,237)").css("outline-width", "1px")
             $(".post-card:contains('"+courseName+"')").css("background-color", "rgb(51, 55, 100").css("outline-width", "3px")
-             $('html, body').animate({
-                scrollTop: $(".post-card:contains('"+courseName+"')").offset().top
+            $('html, body').animate({
+                scrollTop: $(".post-card:contains('"+courseName+"')").offset().top - 100
             }, 2000);
           }
 
 
         }
       }
+
+      $(document).ready(function() {
+          $(".go-to-top-button").click(function() {
+              $('html, body').animate({
+                scrollTop: 0
+            }, 2000);
+          })
+      })
 
      
 </script>

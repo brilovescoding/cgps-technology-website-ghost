@@ -526,11 +526,6 @@ body {
     text-decoration: none;
 }
 
-@media (max-width: 1200px) {
-    .post-card.no-image .post-card-title {
-        font-size: 2.8rem;
-    }
-}
 @media (max-width: 700px) {
     .post-card.no-image:before {
         font-size: 50vw;
@@ -762,6 +757,11 @@ body {
 /* Custom CSS 
 ---------------------------------------------------------------- */
 
+.go-to-top-button {
+    margin-left:auto;
+    margin-right:auto;
+}
+
 .calendar-wrapper {
     background-color: #D8D8D8;
     padding: 0 10px 10px 10px;
@@ -796,7 +796,17 @@ body {
     max-height: 250px;
     outline: 1px solid #F6E119;
     outline-offset: -10px;
-    background: linear-gradient(rgba(0,174,243,.7), rgba(0,174,243,.8));
+
+}
+
+.post-card:after{ 
+    content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  
 
 }
 
