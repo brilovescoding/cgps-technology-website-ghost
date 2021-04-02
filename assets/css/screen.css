@@ -793,6 +793,12 @@ body {
     min-width: 300px;
     min-height:200px;
     max-height: 250px;
+    outline: 1px solid #F6E119;
+    outline-offset: -10px;
+}
+
+hr {
+    color: #F6E119;
 }
 
 @media (max-width: 850px) {
