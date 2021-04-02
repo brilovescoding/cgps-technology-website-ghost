@@ -72,18 +72,20 @@ $(window).on('load', function() {
 	
 
 	/* Apply fancybox to multiple items */
-	
-	$('[data-fancybox]').fancybox({
-		iframe : {
-		  preload : false,
-        autoDimensions: false,
-        css: {
-            width: 600,
-            height: 600
+	if (jQuery().fancybox) {
+        $('[data-fancybox]').fancybox({
+            iframe : {
+            preload : false,
+            autoDimensions: false,
+            css: {
+                width: 600,
+                height: 600
+            }
         }
-	  }
-    
-	});
+        
+        
+        });
+    }
 	
 });
 
