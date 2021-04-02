@@ -777,13 +777,14 @@ body {
 
 .main-page-feed, .course-list-cards{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 10px;
 }
 
 .post-card {
-    min-width: 200px;
+    min-width: 300px;
     min-height:200px;
-    max-height: 300px;
+    max-height: 250px;
 }
 
 @media (max-width: 768px) {
@@ -791,6 +792,8 @@ body {
         grid-template-columns: 1fr;
     
     }
-  
+    .calendar-wrapper {
+        margin-bottom: 30px;
+    }
    
   }
