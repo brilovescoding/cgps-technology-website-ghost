@@ -52,24 +52,19 @@
 var $= jQuery.noConflict();
 
 $(window).on('load', function() {
-
-	
-
 	/* Apply fancybox to multiple items */
-        $('[data-fancybox]').fancybox({
-            iframe : {
+    $('[data-fancybox]').fancybox({
+        iframe : {
             preload : false,
-            autoDimensions: false,
-            css: {
-                width: 600,
-                height: 600
-            }
+            autoDimensions: false
         }
-        
-        
-        });
-	
+    });
 });
+
+$("canvas#defaultCanvas0.p5Canvas").load(function() {
+    $(".fancybox-slide--iframe .fancybox-content").css("width", $("canvas#defaultCanvas0.p5Canvas").css("width"))
+    $(".fancybox-slide--iframe .fancybox-content").css("height", $("canvas#defaultCanvas0.p5Canvas").css("height"))
+})
 
 </script>
 </article>
